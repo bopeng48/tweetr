@@ -1,0 +1,47 @@
+#nav-bar {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding: 0 2em 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-bar .logo {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  padding: 0 5px 0 5px;
+  float: left;
+}
+
+#nav-bar .header {
+  font-size: 3em;
+  padding: 0 5px 0 5px;
+  line-height: 80px;
+  height: 80px;
+  float: left;
+}
+
+.new-tweet {
+  padding:0 2em 0 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet textarea[name="text"] {
+  padding: 0 1em 0 1em;
+  flex-grow: 1;
+  /*width: 100em;*/
+}
+
+.new-tweet h2 {
+  text-align: center;
+}
+
+#nav-bar .create-tweet {
+  height: 50%;
+}

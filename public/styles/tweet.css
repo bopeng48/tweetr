@@ -1,0 +1,31 @@
+div.tweet header{
+  background-color: grey;
+}
+
+
+
+article.tweet {
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+
+img.tweet {
+  width: 2em;
+  height: 2em;
+  margin-left: 1em;
+}
+
+.tweet p{
+  margin-left: 1em;
+  display: inline;
+  line-height: 100%;
+  padding-bottom: : 2em;
+}
+
+.tweet span {
+  margin-left: 5em;
+}
+
+div.tweet span p:hover {
+  font-weight: bold;
+}

@@ -1,0 +1,4 @@
+$ (document).ready(function(event) {
+  var string = $("textarea").text;
+  console.log(string);
+  })

@@ -7,27 +7,60 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/styles/tweet.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+    <div>
+      <img class="logo" src="/images/bird.png" >
       <span class="header">Tweeter</span>
+    </div>
+
+      <button type="button" class="create-tweet">New Tweet</button>
+
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <div class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method = "POST">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+        </div>
+        <div class="tweet">
+          <article class="article-tweet">
+          <header>
+          <span>
+            <img class="tweet" src="/images/smiley.jpg" />
+            <p>this is a tweet header</p>
+          </span>
+          <span class="handle">Mr.tweet</span>
+          </header>
+          <p>this is the tweet, it has some content and maybe pictures to convey meanings and emotions</p>
+          <footer>this is the footer</footer>
+          <i class="fa fa-heart" aria-hidden="true"></i>
+      </article>
+    </div>
+
     </main>
 
+    <section id="tweets-container"></section>
   </body>
 </html>
