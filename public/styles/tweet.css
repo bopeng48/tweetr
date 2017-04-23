@@ -1,4 +1,4 @@
-div.tweet header{
+div.tweet header {
   background-color: grey;
 }
 
@@ -8,6 +8,9 @@ article.tweet {
   width: 80%;
   margin: 0 auto 0 auto;
 }
+article.article-tweet {
+  margin-top: 5em;
+}
 
 img.tweet {
   width: 2em;
@@ -15,7 +18,12 @@ img.tweet {
   margin-left: 1em;
 }
 
-.tweet p{
+.new-tweet {
+  border-radius: 12px;
+  background-color: #c5c4c4;
+}
+
+.tweet p {
   margin-left: 1em;
   display: inline;
   line-height: 100%;
@@ -26,6 +34,34 @@ img.tweet {
   margin-left: 5em;
 }
 
+div.tweet {
+  height: 300px;
+}
+
 div.tweet span p:hover {
   font-weight: bold;
+}
+
+div.button-counter {
+  display:flex;
+  flex-direction: column;
+}
+
+div.submit-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 5px solid;
+}
+
+.article-tweet footer span {
+  margin-left: 0;
+}
+
+.container {
+  background-color: white;
 }

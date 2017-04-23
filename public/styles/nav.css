@@ -40,6 +40,8 @@
 
 .new-tweet h2 {
   text-align: center;
+  text-decoration: underline;
+  text-align: left;
 }
 
 #nav-bar .create-tweet {

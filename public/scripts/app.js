@@ -21,21 +21,29 @@ $(document).ready(() => {
 
     $span.append($img,$name);
     $header.append($span, $span_handle);
+    console.log("header is:",$header);
     return $header;
   }
 
   function CreateBody(content) {
     var $body = $('<p>').text(content);
+    console.log("body is:",$body);
     return $body;
   }
 
   function CreateFooter(timestamp) {
+    var time = moment(timestamp).fromNow();
     var $footer = $('<footer>');
+    var $span = $('<span>').text(time);
+    var $img = $('<i>').addClass('fa fa-heart').attr("aria-hidden",'true').data('like','0');
+    $footer.append($span);
+    $footer.append($img);
+
     return $footer;
   }
 
   function createTweetElement(tweet) {
-    var $tweet = $('<article>').addClass('tweet');
+    var $tweet = $('<article>').addClass('article-tweet');
 
     var img = tweet.user.avatars.regular;
     var name = tweet.user.name;
@@ -46,7 +54,9 @@ $(document).ready(() => {
     var $body = CreateBody(content);
     var $footer = CreateFooter(time);
 
+
     $tweet.append($header, $body , $footer );
+    console.log("the full tweet is",$tweet);
     return $tweet;
   }
 
@@ -55,8 +65,9 @@ $(document).ready(() => {
       // calls createTweetElement for each tweet
       // takes return value and appends it to the tweets container
     tweets.forEach( (tweet) => {
-      $("#tweets-container").append((createTweetElement(tweet))); // do something with it
+      $(".tweet").append((createTweetElement(tweet))); // do something with it
     })
+    likeTweet();  // add .on method to all 'heart icon', it has to be done after all ele are rendered
   }
 
   function loadTweets() {
@@ -95,9 +106,17 @@ $(document).ready(() => {
       $('button').css('color','black');
     })
   }
+
+  function likeTweet(){
+
+  }
+
   composeTweet();
+  console.log("composing tweet");
   submitTweet();
+  console.log("submitting");
   loadTweets();
+  console.log("loggin");
 });
 
 
